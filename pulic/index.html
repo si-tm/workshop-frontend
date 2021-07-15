@@ -1,90 +1,99 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<!-- なんの言語のサイトかを指定 -->
+<html lang="ja">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.7.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.7.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.7.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.7.1/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.7.1/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.7.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.7.1/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.7.1/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.7.1/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.7.1/firebase-performance.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<head>
+    <!-- サイトのタイトルとか（タブに表示されるもの） -->
+    <meta charset="UTF-8">
+    <title>Teara's Sites</title>
+    <link rel="shortcut icon" href="assets/img/teara_icon.png">
+    <!-- 使いたいリソース -->
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome ~ </h2>
-      <h1>Firebase Hosting Setup Complete Wow!
-      </h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+<body>
+    <div id="root" class="hunachi-theme">
+
+        <header class="mdc-top-app-bar" style="top: 0">
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+                    <button id="molcarToolbarButton" class="mdc-button mdc-top-app-bar__action-item toolbar-item"
+                        onclick="location.href='pages/overview.html'">
+                        <i class="material-icons mdc-button__icon" aria-hidden="true">flutter_dash</i>
+                        <span class="mdc-button__label">Overview</span>
+                    </button>
+                    <button id="profileToolbarButton" class="mdc-button mdc-top-app-bar__action-item toolbar-item"
+                        onclick="location.href='pages/member.html'">
+                        <i class="material-icons mdc-button__icon" aria-hidden="true">groups</i>
+                        <span class="mdc-button__label">Member</span>
+                    </button>
+                    <button id="blogToolbarButton"
+                        class="toolbar-most-right-item mdc-button mdc-top-app-bar__action-item"
+                        onclick="location.href='pages/portfolio.html'">
+                        <i class="material-icons mdc-button__icon" aria-hidden="true">computer</i>
+                        <span class="mdc-button__label">Portfolio Sample</span>
+                    </button>
+                </section>
+            </div>
+        </header>
+
+        <div class="mdc-top-app-bar--fixed-adjust center-fit">
+            <div id="title" class="title">
+                <h1 class="title-text">Tearaのホームページ</h1>
+                <img class="title-icon" src="assets/img/teara.png" alt="teara-icon" />
+            </div>
+            <div class="normal-content">これはワークショップ用のサンプルです☆</div>
+            <div class="normal-content">上のAppBarを作るときにMaterial componentsを使いました☆</div>
+            <div class="row_container">
+                <div>Made by </div>
+                <a class="normal-content" href="https://twitter.com/_hunachi">ふなち</a>
+            </div>
+            <div class="subsmall-title">
+                <a class="normal-content"
+                    href="pages/overview.html">簡単なTearaの概要ページは作ってみたので、読みやすいHTMLから始めたい人は参考にしてみてください❤️</a>
+            </div>
+            <div class="subcontainer">
+                <div class="subcontainer-item">概要ページを動かすのに必要なファイル</div>
+                <div class="subcontainer-item">・pages/overview.html</div>
+                <div class="subcontainer-item">・css/main.css</div>
+                <div class="subcontainer-item">・assets/img/ 以下に画像を入れて使っています。</div>
+            </div>
+            <div class="subsmall-title">
+                <div class="row_container">
+                    <div>ポートフォリオを作ってみたい！という人は</div>
+                    <a class="normal-content" href="pages/portfolio.html">このサンプル</a>
+                    <div>を参考に作ってみてください！</div>
+                </div>
+            </div>
+            <div class="subcontainer">
+                <div class="subcontainer-item">Portfolioのサンプルを動かすのに必要なファイル</div>
+                <div class="subcontainer-item">・pages/portfolio.html</div>
+                <div class="subcontainer-item">・js/portfolio_script.js</div>
+                <div class="subcontainer-item">・css/portfolio_styles.css</div>
+                <div class="subcontainer-item">・assets/img/portfolio/ 以下に画像を入れて使っています。</div>
+            </div>
+            <div class="normal-content">備考：bootstrapのテンプレートを使った。</div>
+            <a class="normal-content"
+                href="https://startbootstrap.com/theme/freelancer">https://startbootstrap.com/theme/freelancer</a>
+            <div class="normal-content subsmall-title">いろんなページにテキストや画像追加してみてなのだ🐹</div>
+        </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script>mdc.autoInit()</script>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.7.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/8.7.1/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>    
+</body>
+
 </html>
